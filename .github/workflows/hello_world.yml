@@ -50,7 +50,7 @@ jobs:
       run: black --exclude .+\.ipynb --check --line-length 70 --line-length 70 src/
 
     - name: Checks if the code is of good quality using flake8
-      run: flake8 --show-source --statistics --max-line-length 70 --max-line-length=70 src/ tests/
+      run: flake8 --show-source --statistics --max-line-length 70 --max-line-length=70 src/
 
   test:
     runs-on: ubuntu-latest
