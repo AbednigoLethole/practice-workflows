@@ -25,6 +25,21 @@ jobs:
     - name: Output list of files in the working directory
       run: ls
 
+  linting:
+    runs-on: ubuntu-latest
+    needs: build 
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Checks if the code is of good quality
+      run: echo "Checks if the code is of good quality"
+
   test:
     runs-on: ubuntu-latest
     needs: build 
