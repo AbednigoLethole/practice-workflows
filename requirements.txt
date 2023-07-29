@@ -2,3 +2,4 @@ canopen
 pylint
 flake8
 black
+isort

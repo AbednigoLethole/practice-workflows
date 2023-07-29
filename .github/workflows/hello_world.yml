@@ -38,7 +38,7 @@ jobs:
       with:
         python-version: '3.8'
     - name: Checks if the code is of good quality
-      run: echo "Checks if the code is of good quality"
+      run: isort --check-only --profile black --line-length 70 -w 70 src/ 
 
   test:
     runs-on: ubuntu-latest
