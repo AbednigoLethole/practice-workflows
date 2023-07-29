@@ -44,7 +44,9 @@ jobs:
         pip install -r requirements.txt  # If you have any dependencies
 
     - name: Checks if the code is of good quality
-      run: isort --check-only --profile black --line-length 70 -w 70 src/ 
+      run: isort --check-only --profile black --line-length 70 -w 70 src/
+      run: black --exclude .+\.ipynb --check --line-length 70 --line-length 70 src/
+      run: flake8 --show-source --statistics --max-line-length 70 --max-line-length=70 src/ tests/
 
   test:
     runs-on: ubuntu-latest
